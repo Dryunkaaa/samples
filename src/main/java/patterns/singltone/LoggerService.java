@@ -2,15 +2,12 @@ package patterns.singltone;
 
 public class LoggerService {
 
-    private static LoggerService instance;
+    private static LoggerService instance = new LoggerService();
 
     private LoggerService() {
     }
 
     public static LoggerService getInstance() {
-        if (instance == null){
-            instance = new LoggerService();
-        }
         return instance;
     }
 
